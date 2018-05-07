@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function binarySearch(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+    while (left <= right) {
+        const mid = left + Math.floor((right - left) / 2);
+        if (arr[mid] === target) {
+            return mid;
+        }
+        if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return return;
+}
+
+console.log(binarySearch(27, {from:0, to:100}));
+
+
+function binarySearch(number, obj) {
+	var result = [];
+	var down = obj.from, num = up = obj.to;
+	while (true) {
+		if (num === number) return result;
+		if (num > number) {
+			up = num;
+		} else down = num;
+		num = Math.round((up + down)/2);
+		result.push(num);
+	}
+	return result;
+}
+
+console.log(binarySearch(27, {from:0, to:100}));  //[50, 25, 38, 32, 29, 27]
+
+        </script>
+</body>
+</html>

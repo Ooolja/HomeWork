@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function duplicate(array) {
+	var result = [] 
+	var temp = [];  
+	array.forEach(function(elem) {
+		if (temp.indexOf(elem) != -1) {
+			if (result.indexOf(elem) === -1) result.push(elem); 
+		}
+		temp.push(elem);
+	});
+	return result;
+}
+
+console.log(duplicate([11,2,54,22,43,43,-1,2,43,2,5,7,8,9,22,2,6])); //[43, 2, 22]
+        
+
+
+
+
+        </script>
+
+</body>
+</html>

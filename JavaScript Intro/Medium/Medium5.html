@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+      var someString = 'aabcbd';
+
+      function firstNonRepeatedCharacter(string) 
+      {
+        for (var i = 0; i < string.length; i++) 
+        {
+          var x = string.charAt(i);
+          if (string.indexOf(x) == i && string.indexOf(x, i + 1) == -1) 
+          {
+            return x;
+          }
+        }
+      return null;
+      }
+      console.log(firstNonRepeatedCharacter(someString))
+  </script>
+</body>
+</html>

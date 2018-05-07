@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function letterReverse(str){
+            var letter = '';
+            for (i =0; i< str.length; i++ ) {
+                letter += str[str.length - 1 - i];
+            }
+            return letter
+            }
+            console.log(letterReverse('hello world'))
+
+
+        /*function letterReverse(letter1){
+            return letter1.reverse();
+            }
+                var letter1 = ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+            console.log(letterReverse(letter1));*/
+        
+        </script>
+</body>
+</html>

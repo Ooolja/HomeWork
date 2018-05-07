@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPostalCodeValid(code){
+            let regexpr = /^\d{5}$/;
+            return regexpr.test(code);
+        }
+        console.log(isPostalCodeValid('37232'))
+        console.log(isPostalCodeValid('372321'))
+        console.log(isPostalCodeValid('3723'))
+        console.log(isPostalCodeValid('3hr7232'))
+        console.log(isPostalCodeValid('w37232'))
+
+//        function isValidPostalCode(postalCode, countryCode) {
+//     switch (countryCode) {
+//         case "US":
+//             postalCodeRegex = /^([0-9]{5})(?:[-\s]*([0-9]{4}))?$/;
+//             break;
+//         case "CA":
+//             postalCodeRegex = /^([A-Z][0-9][A-Z])\s*([0-9][A-Z][0-9])$/;
+//             break;
+//         default:
+//             postalCodeRegex = /^(?:[A-Z0-9]+([- ]?[A-Z0-9]+)*)?$/;
+//     }
+//     return postalCodeRegex.test(postalCode);
+// }
+ 
+        </script>
+</body>
+</html>

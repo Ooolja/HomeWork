@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getMinMax(arr){
+        var number_min = arr[0]
+        for (var i = 1; i<arr.length; ++i ){
+        if (number_min > arr[i])
+        number_min = arr[i]
+            }
+            var number_max = arr[0]
+            for (var i = 1; i<arr.length; ++i ){
+            if (number_max < arr[i])
+            number_max = arr[i]
+            }
+            return [number_min, number_max]
+        }
+
+            var number = [1, 2, 3, 4, 5, 7]
+            console.log(getMinMax(number));
+        </script>
+    
+</body>
+</html>

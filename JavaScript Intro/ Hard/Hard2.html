@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var data = {
+	name : 'Roman',
+	surname : 'Rodomansky',
+	age : '102',
+}
+function validate (keyList, inputObject)
+{
+	result = true;
+	for(i=0; i<keyList.length; i++)
+	{
+	if ( !(keyList[i] in inputObject) )
+	result = false;
+	}
+	return result;
+}
+function validateKey (key, inputObject)
+{
+	return key in inputObject;
+}
+console.log(validate(["name","surname","age"], data))
+
+
+
+
+
+//     function validation(){
+		
+		
+// 		valid = true;
+		
+// 		if (document.myForm.name.value ==""){
+		
+// 		alert("Please enter your name");
+// 		valid = false;
+// 		}
+// 		if (document.myForm.lastname.value ==""){
+		
+// 		alert("Please enter your lastname");
+// 		valid = false;
+// 		}
+// 		if (document.myForm.address.value ==""){
+		
+// 		alert("Please enter your address");
+// 		valid = false;
+// 		}
+		
+// 		return valid;
+// }
+        </script>
+
+</body>
+</html>

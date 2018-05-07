@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>      
+        <form>
+                <fieldset>
+                    <label for="input">
+                        Input
+                    </label>
+                    <input type="number" id="input"/>
+                </fieldset>
+                <fieldset>
+                    <button type="button" id="button" onclick="toUAN()">Convert to UAN</button>
+                </fieldset>
+                <fieldset>
+                    <p>USD amount in UAN</p>
+                    <p id="uanValue">&nbsp;</p>
+                </fieldset>
+            </form>
+            <script>
+            function toUAN() {
+                var usd = document.getElementById("input").value;
+                var uan = (25.00 * usd);
+                document.getElementById("uanValue").innerHTML = uan.toFixed(10);
+            }
+            </script>
+            </br>
+ <form>
+      
+        <fieldset>
+            <button type="button" id="button" onclick="toUSD()">Convert to USD</button>
+        </fieldset>
+        <fieldset>
+            <p>UAN amount in USD</p>
+            <p id="usdValue">&nbsp;</p>
+        </fieldset>
+    </form>
+    <!-- getElementById("input").value знайти елемент з ID -->
+    <script>
+    function toUSD() {
+        var uan = document.getElementById("input").value;
+        var usd = (0.25 * uan);
+        document.getElementById("usdValue").innerHTML = usd.toFixed(10);
+    }
+    </script>
+
+    </script>
+</body>
+</html>
